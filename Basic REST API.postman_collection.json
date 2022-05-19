@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "3b8dab97-f0e9-4cc8-bce1-dfa00cd076fd",
+		"name": "Basic REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13343591"
+	},
+	"item": [
+		{
+			"name": "All Teachers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_server}}/get-all",
+					"host": [
+						"{{api_server}}"
+					],
+					"path": [
+						"get-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Teacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Veronica\",\r\n    \"age\": 27,\r\n    \"isEnabled\": true,\r\n    \"skills\": [\"math\", \"zoom\", \"gym\", \"javascript\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_server}}/post",
+					"host": [
+						"{{api_server}}"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Teacher",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"Argentina\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_server}}/update/6284078f66f817794cb2bb29",
+					"host": [
+						"{{api_server}}"
+					],
+					"path": [
+						"update",
+						"6284078f66f817794cb2bb29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teacher",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_server}}/get-record/6284078f66f817794cb2bb29",
+					"host": [
+						"{{api_server}}"
+					],
+					"path": [
+						"get-record",
+						"6284078f66f817794cb2bb29"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_server",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
