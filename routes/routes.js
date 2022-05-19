@@ -9,10 +9,22 @@ const Teacher = require('../models/Teacher');
 router.get('/get-all', async (req, res) => {
 	try {
 		const data = await Teacher.find();
-		res.json(data);
+		res.send(data);
 	}
 	catch (error) {
-		res.status(500).json({ message: error.message });
+		res.status(400).json({ message: error.message });
+	}
+});
+
+// GET (one record)
+router.get('/get-record/:id', async (req, res) => {
+	try {
+		const id = req.params.id;
+		const result = await Teacher.findOne({_id: id});
+		res.send(result);
+	}
+	catch (error) {
+		res.status(400).json({ message: error.message });
 	}
 });
 
@@ -24,6 +36,7 @@ router.post('/post', async (req, res) => {
 		age,
 		isEnabled,
 		skills,
+		country,
 	});
 	try {
 		const savedData = await data.save();
