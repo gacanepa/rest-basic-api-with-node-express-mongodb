@@ -23,5 +23,6 @@ const dataSchema = new mongoose.Schema({
 	},
 });
 
+// Relate the model with the teachers collection or create it in the database if not already present
 module.exports = mongoose.model('Teacher', dataSchema);
 
