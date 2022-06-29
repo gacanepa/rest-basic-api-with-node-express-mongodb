@@ -29,7 +29,10 @@ database.once('connected', () => {
 // Initialize app and routes
 const app = express();
 app.use(cors({
-  origin: process.env.FRONTEND_APP,
+  origin: [
+    process.env.FRONTEND_APP,
+    process.env.BUILD_APP,
+  ],
 }));
 app.use(express.json());
 app.use('/api', routes);
