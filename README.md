@@ -18,7 +18,7 @@
 
 ## React frontend
 
-1. Move into client/: `cd client`
+1. Move into **client/**: `cd client`
 2. Run `npm install` to put the Node modules in place.
 3. Launch the app in development mode with `npm start`. To stop it, hit Ctrl+C.
 
