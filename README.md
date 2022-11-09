@@ -7,7 +7,7 @@
 3. Create another MongoDB user with the `readWrite` role in the **academy** database.
 4. Clone this repository and run `npm install` inside of **api/**.
 5. Rename `.env.sample` to `.env` and replace the user credentials with those of the account you created in step 3.
-6. Install [PM2](https://pm2.keymetrics.io/) to manage the API: `npm install pm2@latest -g`
+6. Install [PM2](https://pm2.keymetrics.io/) to manage the API: `npm install pm2@latest -g`.
 7. Run `pm2 start index.js` to launch the API. You can view the status and stop the process by replacing `start` with `status` and `stop`, respectively.
 
 ![PM2 start, status, and stop](/images/pm2-start-status-stop.png)
