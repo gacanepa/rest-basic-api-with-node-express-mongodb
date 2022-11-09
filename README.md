@@ -24,7 +24,7 @@
 
 **Important**: This app does not implement any form of authentication or other security measures. You are more than welcome to submit a PR with those features.
 
-To do:
+## To do:
 
 - Build the app and serve it through Nginx.
 - Implement CI/CD using Github actions and deploy to a cloud provider.
